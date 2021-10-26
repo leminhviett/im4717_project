@@ -1,0 +1,48 @@
+/* Style the navigation bar */
+.navbar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	background-color: #555;
+	overflow: hidden;
+	height: 60px;
+	color: wheat;
+	/* margin-bottom: -60px; */
+	z-index: 100;
+	position: sticky;
+	top: 0;
+}
+
+.links_container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	height: 100%;
+}
+/* Navbar links */
+.navbar a {
+	padding: 20px;
+	color: white;
+	text-decoration: none;
+	font-size: 18px;
+	transition: 0.2s ease-in-out;
+}
+
+/* Navbar links on mouse-over */
+.navbar a:hover {
+	background-color: #04aa6d;
+}
+
+a:active {
+	background-color: #04aa6d;
+}
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 500px) {
+	.navbar a {
+		float: none;
+		display: block;
+	}
+}

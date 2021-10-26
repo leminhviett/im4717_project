@@ -1,0 +1,17 @@
+.container {
+	display: flex;
+	justify-content: space-around;
+	align-content: center;
+	padding: 20px 20px;
+}
+
+.smaller_col {
+	flex-grow: 2;
+	max-width: 300px;
+	padding: 20px 20px;
+}
+
+.larger_col {
+	flex-grow: 5;
+	padding: 20px 20px;
+}

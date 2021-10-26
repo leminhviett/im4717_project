@@ -1,0 +1,11 @@
+button {
+	border-radius: 20px;
+	border: none;
+	padding: 10px 20px;
+	background-color: none;
+	transition: 0.2s ease-in-out;
+}
+
+button:hover {
+	background-color: #04aa6d;
+}

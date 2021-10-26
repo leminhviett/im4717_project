@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>JavaJam Coffe House</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<style>
+			textarea {
+				resize: none;
+			}
+		</style>
+		<script src="js/update.js"></script>
+	</head>
+	<body>
+		<div id="most-outer-wrapper">
+			<header>
+				<img class="center" src="./img/header.jpg" alt="JCH" />
+			</header>
+			<div class="parent_flex">
+				<nav class="small_child">
+					<a href="index.html">Home</a>
+					<a href="menu.html">Menu</a>
+					<a href="music.html">Music</a>
+					<a href="jobs.html">Jobs</a>
+					<a href="update.html">Update Price</a>
+					<a href="report.html">Report</a>
+				</nav>
+				<div class="big_child">
+					<h2>Today Report</h2>
+					<form id="my_form" action="report.php" method="POST">
+						<table>
+							<tr class="odd">
+								<td>
+									<input
+										type="checkbox"
+										id="query_1"
+										name="query_1"
+										value="query_1"
+									/>
+									<label for="query_1"> Total dollar sales by product</label>
+								</td>
+							</tr>
+							<tr class="odd">
+								<td>
+									<input
+										type="checkbox"
+										id="query_2"
+										name="query_2"
+										value="query_2"
+									/>
+									<label for="query_2"> Total quantity sales by category</label>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="submit" />
+								</td>
+							</tr>
+						</table>
+					</form>
+				</div>
+			</div>
+			<footer>
+				<small><i>Copyright &copy; 2014 JavaJam Coffe House</i></small>
+				<br />
+				<small>
+					<i><a href="viet@le.com"> viet@le.com </a></i>
+				</small>
+			</footer>
+		</div>
+	</body>
+</html>

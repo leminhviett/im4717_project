@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>JavaJam Coffe House</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<style>
+			textarea {
+				resize: none;
+			}
+		</style>
+		<script src="js/update.js"></script>
+	</head>
+	<body>
+		<div id="most-outer-wrapper">
+			<header>
+				<img class="center" src="./img/header.jpg" alt="JCH" />
+			</header>
+			<div class="parent_flex">
+				<nav class="small_child">
+					<a href="index.html">Home</a>
+					<a href="menu.html">Menu</a>
+					<a href="music.html">Music</a>
+					<a href="jobs.html">Jobs</a>
+					<a href="update.html">Update Price</a>
+					<a href="report.html">Report</a>
+				</nav>
+				<div class="big_child">
+					<h2>Coffee at JavaJam</h2>
+					<form
+						id="my_form"
+						action="update.php"
+						method="POST"
+						onsubmit="return parse_input_update();"
+					>
+						<table>
+							<tr class="odd">
+								<td>
+									<h3>Just Java</h3>
+								</td>
+								<td>
+									<p>
+										Regular house blend, decaffeinated coffee, or flavor of the
+										day.<br />
+										Endless Cup
+									</p>
+									<input
+										type="checkbox"
+										id="price_1_single"
+										name="price_1_single"
+										value=""
+									/>
+									<label for="price_1"> Price</label>
+									<textarea id="new_price_1" rows="1" cols="4">0</textarea>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<h3>Cafe au Lait</h3>
+								</td>
+								<td>
+									<p>
+										House blended coffee infused into a smooth, steamed milk.<br />
+									</p>
+									<input
+										type="checkbox"
+										id="price_2_single"
+										name="price_2_single"
+										value=""
+									/>
+									<label for="price_2">Single</label>
+									<textarea id="new_price_2_sing" rows="1" cols="4">0</textarea>
+									<input
+										type="checkbox"
+										id="price_2_double"
+										name="price_2_double"
+										value=""
+									/>
+									<label for="price_2">Double</label>
+									<textarea id="new_price_2_doub" rows="1" cols="4">0</textarea>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<h3>Iced Capuccino</h3>
+								</td>
+								<td>
+									<p>
+										Sweetened espresso blended with icy-cold milk and served in
+										a chilled glass.
+									</p>
+									<input
+										type="checkbox"
+										id="price_3_single"
+										name="price_3_single"
+										value=""
+									/>
+									<label for="price_3">Single</label>
+									<textarea id="new_price_3_sing" rows="1" cols="4">0</textarea>
+									<input
+										type="checkbox"
+										id="price_3_double"
+										name="price_3_double"
+										value=""
+									/>
+									<label for="price_3">Double</label>
+									<textarea id="new_price_3_doub" rows="1" cols="4">0</textarea>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="submit" />
+									<!-- <input type="submit" onclick="return parse_input_update();" /> -->
+								</td>
+							</tr>
+						</table>
+					</form>
+				</div>
+			</div>
+			<footer>
+				<small><i>Copyright &copy; 2014 JavaJam Coffe House</i></small>
+				<br />
+				<small>
+					<i><a href="viet@le.com"> viet@le.com </a></i>
+				</small>
+			</footer>
+		</div>
+	</body>
+</html>
