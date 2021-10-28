@@ -10,14 +10,9 @@
     $desc = $json_a["desc"];
     $date_time = $json_a["date_time"];
 
-    @ $db = new mysqli('localhost', 'root', '', 'cinema');
-    $image = mysqli_real_escape_string($db, $image);
+    require_once 'db_conn.php';
 
-    if (mysqli_connect_errno()) {
-        echo mysqli_connect_errno();
-        // echo "Error: Could not connect to database.  Please try again later.";
-        exit;
-     }
+    $image = mysqli_real_escape_string($db, $image);
 
     $query1 = "insert into movies (name, description, poster_img) values ('".$movie_name."', '".$desc."', '".$image."')";
     $result = $db->query($query1);
@@ -30,7 +25,4 @@
     }
 
     $db->close();
-
-
-
 ?>

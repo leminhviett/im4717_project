@@ -1,48 +1,13 @@
 <!DOCTYPE html>
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<?php require 'shared/head.php' ?>
 
-		<title>Booking Movie</title>
-		<meta name="description" content="A simple booking movie site" />
-		<meta name="author" content="SitePoint" />
-
-		<link rel="icon" href="/favicon.ico" />
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-		/>
-		<link rel="stylesheet" href="./css/style.css" />
-		<link rel="stylesheet" href="./css/button.css" />
-		<link rel="stylesheet" href="./css/nav_bar.css" />
-		<link rel="stylesheet" href="./css/home.css" />
-		<link rel="stylesheet" href="./css/movies.css" />
-
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@400;700&family=Encode+Sans:wght@400;700&display=swap"
-			rel="stylesheet"
-		/>
-	</head>
+	<link rel="stylesheet" href="../css/movies.css" />
 
 	<body>
-		<nav class="navbar">
-			<div class="logo"><p>Logo</p></div>
-			<div class="links_container">
-				<a href="#">Home</a>
-				<a href="about.html"> About us</a>
-				<a href="about.html"> About us</a>
-				<a href="about.html"> About us</a>
-				<a href="about.html"> About us</a>
-			</div>
-			<div>
-				<button style="background-color: transparent; color: white">Sign up</button>
-				<button>Sign in</button>
-			</div>
-		</nav>
+		<?php require 'nav_bar.php' ?>
+
 
 		<div style="padding: 30px 30px; text-align: center">
 			<h2>Watching now</h2>

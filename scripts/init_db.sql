@@ -1,5 +1,6 @@
 create table users
 ( id int unsigned not null auto_increment primary key,
+    user_id char(10) not null,
   full_name char(50) not null,
   email char(50),
   hashed_pw char(32) not null,

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <body>
 
 <?php
@@ -29,7 +30,7 @@
             $result = $db->query($query);
             $row = $result->fetch_assoc();
 
-            echo  "<p><b>".$row['name']. "</b> updated to <b>".$price."</b></p>" ;
+            echo  "<p><b>".$row['name']. "</b> type: <b>". $type ."</b> updated to <b>".$price."</b></p>" ;
         } else {
             echo "An error has occurred.  The item was not updated.";
         }
@@ -41,4 +42,6 @@
 ?>   
 
 </body>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+
 </html>
