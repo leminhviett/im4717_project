@@ -8,9 +8,14 @@
 	
 	<body>
 		<?php
-			require 'nav_bar.php'
-		?>
+			require 'shared/nav_bar.php';
 
+            if(isset($_SESSION["message"])) {
+                $message = $_SESSION["message"];
+                echo "<script>alert('$message')</script>";
+				unset($_SESSION["message"]);
+            }
+        ?>
 		<div class="banner_container">
 			<div class="banner_bg">
 				<img src="../imgs/banner_bg.jpeg" alt="Snow" style="height: 100%; width: 100%" />
@@ -20,30 +25,8 @@
 				<h1>Heading</h1>
 				<p>content</p>
 				<br />
-				<button>Watch now</button>
+				<button onclick="location.href='http://localhost/pages/movies.php';">Showing now</button>
 			</div>
 		</div>
-		<div style="padding: 10px 30px">
-			<h2>Trending now</h2>
-			<div class="card_container">
-				<div class="card_col">
-					<h1>Headning</h1>
-					<p>paragraph</p>
-				</div>
-				<div class="card_col">
-					<h1>Headning</h1>
-					<p>paragraph</p>
-				</div>
-				<div class="card_col">
-					<h1>Headning</h1>
-					<p>paragraph</p>
-				</div>
-				<div class="card_col">
-					<h1>Headning</h1>
-					<p>paragraph</p>
-				</div>
-			</div>
-		</div>
-		<script src="js/scripts.js"></script>
 	</body>
 </html>

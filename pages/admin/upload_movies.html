@@ -29,12 +29,19 @@
 		<form
 			id="upload"
 			method="post"
-			action="/server/submit_movies.php"
+			action="/pages/admin/submit_movies.php"
 			enctype="multipart/form-data"
 		>
-			<label for="file">File to upload</label>
-			<input type="file" id="file" name="movie_info" accept=".json" />
-			<input type="file" id="file" name="movie_poster" accept="image/*" />
+			<label for="movie_info">Movie info</label>
+			<input type="file" id="movie_info" name="movie_info" accept=".json" />
+			<br />
+			<br />
+
+			<label for="movie_poster">Movie poster</label>
+
+			<input type="file" id="movie_poster" name="movie_poster" accept="image/*" />
+			<br />
+
 			<input type="submit" />
 		</form>
 	</body>

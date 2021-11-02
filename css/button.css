@@ -7,5 +7,6 @@ button {
 }
 
 button:hover {
-	background-color: #04aa6d;
+	background-color: wheat;
+	color: black;	
 }

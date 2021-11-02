@@ -1,6 +1,6 @@
 create table users
 ( id int unsigned not null auto_increment primary key,
-    user_id char(10) not null,
+  user_id char(10) not null,
   full_name char(50) not null,
   email char(50),
   hashed_pw char(32) not null,
@@ -22,9 +22,9 @@ create table schedule
 create table seats
 ( id int unsigned not null auto_increment primary key,
   schedule_id int,
-  movie_id int,
   seat_row enum('A','B','C','D','E','F'),
-  seat_col enum('1','2','3','4','5','6','7','8','9')
+  seat_col enum('1','2','3','4','5','6','7','8','9'),
+  booked BIT
 );
 
 create table bookings {
@@ -32,10 +32,3 @@ create table bookings {
     seat_id int,
     user_id int
 }
-
-
-
-
-
-
-
