@@ -25,7 +25,11 @@
 				<h1>Heading</h1>
 				<p>content</p>
 				<br />
-				<button onclick="location.href='http://localhost/pages/movies.php';">Showing now</button>
+				<?php
+					$location = "location.href='$root_name/pages/movies.php';";
+					echo "<button onclick=$location>Showing now</button>";
+
+				?>
 			</div>
 		</div>
 	</body>

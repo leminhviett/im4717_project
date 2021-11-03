@@ -15,7 +15,7 @@ create table movies
 create table schedule
 ( id int unsigned not null auto_increment primary key,
   movie_id int,
-  date_time datetime(0),
+  date_time datetime,
   hall enum('A','B','C','D','E','F')
 );
 
@@ -27,8 +27,8 @@ create table seats
   booked BIT
 );
 
-create table bookings {
+create table bookings (
     id int unsigned not null auto_increment primary key,
     seat_id int,
     user_id int
-}
+)

@@ -139,7 +139,11 @@
                         $db->close();
                     ?>
                 </div>
-                <button onclick="location.href='http://localhost/pages/log_out.php';">Log out</button>
+
+                <?php
+					$location = "location.href='$root_name/pages/log_out.php';";
+					echo "<button onclick=$location>Log out</button>";
+				?>
             </div>
         </div>
 
