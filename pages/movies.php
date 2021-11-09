@@ -50,7 +50,7 @@
 								<img
 									src='$image_data'
 									alt='$name'
-									style='width: 100%; height: auto; border-radius: 15px'
+									style='width: 100%; height: 300px; max-height: 55%; border-radius: 15px'
 								/>
 			
 									<div class='movie_info'>

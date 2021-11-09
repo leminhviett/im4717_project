@@ -10,9 +10,11 @@ if(isset($_POST['sub']))
 
 	$query = mysqli_query($db,"select* from users where user_id='$username'and hashed_pw=md5('$pw')");
 	$result=mysqli_fetch_array($query);
+	$role = $result["role"];
 	if($result) {
         mysqli_close($db);
 		$_SESSION['username'] = $username;
+		$_SESSION['role'] = $role;
 		$_SESSION['message'] = "Log in sucessful!";
         header("Location:home.php");
 	}

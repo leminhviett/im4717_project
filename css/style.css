@@ -4,3 +4,16 @@
 	padding: 0;
 	font-family: "Encode Sans Expanded", Verdana, sans-serif;
 }
+
+body {
+	background-color: #141d2b;
+	color: white;
+}
+
+.center {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: row;
+	margin-top: 50px;
+}

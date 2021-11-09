@@ -10,13 +10,13 @@
 	<body>
 	<style>
 	.about_header{
-		text-shadow: 2px 2px 4px #000000;
+		/* text-shadow: 2px 2px 4px #000000; */
 		
 	}
 	.about_content{
 		font-family: "Courier New", monospace;
 		font-size: 1.2rem;
-		text-shadow: 2px 2px 4px #000000;
+		/* text-shadow: 2px 2px 4px #000000; */
 		
 	}
 	.about_bg {
@@ -30,9 +30,9 @@
 		color: white;
 		z-index: 100;
 		background-position: center;
-		background-size: 1100px 720px;
-		height: 720px;
-		width: 1100px;
+		background-size: 900px 600px;
+		height: 600px;
+		width: 900px;
 		background-repeat: no-repeat;
 		font-size: 25px;
 		border-radius: 25px;
@@ -41,8 +41,8 @@
 	}
 	.blur_bg {
 		/* filter: brightness(50%); */
-		filter: blur(8px);
-		-webkit-filter: blur(8px) brightness(0.5);
+		filter: blur(3px);
+		-webkit-filter: blur(3px) brightness(0.45);
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -50,15 +50,20 @@
 		color: white;
 		z-index: 99;
 		background-position: center;
-		background-image: url("..//imgs/banner_bg.jpeg");
-		background-size: 1100px 720px;
-		height: 720px;
-		width: 1100px;
+		background-image: url("../imgs/about.jpeg");
+		background-size: 900px 600px;
+		height: 600px;
+		width: 900px;
 		background-repeat: no-repeat;
 		font-size: 25px;
 		border-radius: 25px;
 		padding:5%;
 		background-color: rgba(54, 54, 54, 0.5);
+	}
+
+	a {
+		text-decoration: none;
+		color: white;
 	}
 </style>
 		<?php
@@ -72,7 +77,7 @@
         ?>
 		<div class="banner_container">
 			<div class="banner_bg">
-				<img src="../imgs/banner_bg.jpeg" alt="Snow" style="height: 100%; width: 100%" />
+				<img src="../imgs/about.jpeg" alt="Snow" style="height: 100%; width: 100%" />
 			</div>
 			
 			<div class="blur_bg">

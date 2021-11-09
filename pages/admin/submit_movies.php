@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="../../css/style.css" />
+
+
 <?php
     // TODO: check admin role
     $name = $_FILES["movie_info"]['name'];

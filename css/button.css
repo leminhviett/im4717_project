@@ -4,9 +4,10 @@ button {
 	padding: 10px 20px;
 	background-color: none;
 	transition: 0.2s ease-in-out;
+	background-color: #01bf71;
+	color: black;
 }
 
 button:hover {
-	background-color: wheat;
-	color: black;	
+	background-color: white;
 }

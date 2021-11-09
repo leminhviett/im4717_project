@@ -1,8 +1,9 @@
 .movie_card {
-	background-color: antiquewhite;
+	background-color: #2a364a;
 	padding: 10px 10px;
 	margin: 20px 10px;
 	max-width: 250px;
+	max-height: 600px;
 	border-radius: 15px;
 	display: flex;
 	justify-content: flex-start;

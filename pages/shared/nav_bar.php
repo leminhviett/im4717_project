@@ -2,11 +2,11 @@
 
 
 <nav class="navbar">
-    <div class="logo"><p>Logo</p></div>
+    <div class="logo"><img src="../imgs//logo.svg" width="auto" height="100%"><p></p></div>
     <div class="links_container">
         <a href="home.php">Home</a>
         <a href="movies.php"> Showing now</a>
-        <a href="about.html"> About us</a>
+        <a href="about.php"> About us</a>
     </div>
     <div>
         <?php

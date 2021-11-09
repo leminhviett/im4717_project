@@ -32,3 +32,5 @@ create table bookings (
     seat_id int,
     user_id int
 )
+
+INSERT INTO `users`(`user_id`, `full_name`, `email`, `hashed_pw`, `role`) VALUES ('admin', 'admin', 'admin@mail.com', MD5('admin'), 'ADMIN');
