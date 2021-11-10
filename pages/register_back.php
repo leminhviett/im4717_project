@@ -13,7 +13,8 @@
 
     if (mysqli_num_rows($res_u) > 0) {
         mysqli_close($db);
-        header("Location:register_front.php?message=Username already taken");
+        $_SESSION['message'] = "Username already taken";
+        header("Location:register_front.php");
         exit();
     }
 
@@ -31,7 +32,8 @@
         header("Location:home.php");
     } else{
         mysqli_close($db);
-        echo "ERROR: Could not able to execute due to " . mysqli_error($db);
+        $_SESSION['message'] = "Something wrong during registration. Please try again";
+        header("Location:register_front.php");
     }
     
     // Close connection

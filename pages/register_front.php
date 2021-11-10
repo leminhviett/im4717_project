@@ -8,13 +8,12 @@
 	
 	<body>
 		<?php
-			require 'shared/nav_bar.php'
-		?>
+			require 'shared/nav_bar.php';
 
-        <?php
-            if(isset($_GET["message"])) {
-                $message = $_GET["message"];
+            if(isset($_SESSION["message"])) {
+                $message = $_SESSION["message"];
                 echo "<script>alert('$message')</script>";
+                unset($_SESSION["message"]);
             }
         ?>
         
@@ -23,21 +22,18 @@
                 <h1>Register</h1>
                 <br>
                 <p>Please fill in this form to create an account.</p>
-                <hr>
 
                 <label for="username"><b>Username</b></label>
                 <input type="text" placeholder="Enter username" name="username" id="username" required>
 
                 <label for="fullname"><b>Full name</b></label>
-                <input type="text" placeholder="Enter full name" name="fullname" id="fullname" required>
+                <input type="text" placeholder="Enter full name" name="fullname" id="fullname" onfocusout="return check_input();" required>
 
                 <label for="email"><b>Email</b></label>
-                <input type="text" placeholder="Enter Email" name="email" id="email" required>
+                <input type="text"  type="email" placeholder="Enter Email" name="email" id="email" required>
 
                 <label for="psw"><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" name="pw" id="pw" required>
-
-                <hr>
 
                 <button type="submit" class="registerbtn" name="sub">Register</button>
                 <br>

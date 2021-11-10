@@ -8,7 +8,13 @@
 	
 	<body>
 		<?php
-			require 'shared/nav_bar.php'
+			require 'shared/nav_bar.php';
+            
+            if(isset($_SESSION["message"])) {
+                $message = $_SESSION["message"];
+                echo "<script>alert('$message')</script>";
+				unset($_SESSION["message"]);
+            }
 		?>
 
         <form action="login_back.php" method="POST">
@@ -21,8 +27,6 @@
 
                 <label for="pw"><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" name="pw" id="pw" required>
-
-                <hr>
 
                 <button type="submit" class="registerbtn" name="sub">Log in</button>
                 <br>

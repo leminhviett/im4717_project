@@ -17,13 +17,19 @@
                     if (!isset( $_SESSION['username'])) {
                         header("Location:login_front.php");
                     }
+
+                    $sched_id = $_POST["sched_id"];
+                    unset($_POST['sched_id']);
+
+                    if(count($_POST) == 0) {
+                        echo "<p>You did not choose any seat!</p>";
+                        exit();
+                    }
+
                     $username = $_SESSION['username'];
                     $result = $db->query("select * from users where user_id='$username'");
                     $user_id = $result->fetch_assoc()["id"];
 
-
-                    $sched_id = $_POST["sched_id"];
-                    unset($_POST['sched_id']);
 
 
                     foreach($_POST as $key => $value) {

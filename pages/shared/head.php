@@ -1,6 +1,5 @@
 <?php
-
-	$root_name = '/f32ee';
+	$root_name = '';
  	require_once 'db_conn.php';
     echo "
     <head>

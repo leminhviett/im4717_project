@@ -2,11 +2,16 @@
 
 
 <nav class="navbar">
-    <div class="logo"><img src="../imgs//logo.svg" width="auto" height="100%"><p></p></div>
+    <div class="logo"><img src="../imgs/logo.svg" width="auto" height="100%"><p></p></div>
     <div class="links_container">
         <a href="home.php">Home</a>
         <a href="movies.php"> Showing now</a>
         <a href="about.php"> About us</a>
+        <?php
+            if (isset($_SESSION['role']) && $_SESSION['role']=='ADMIN') {
+                echo "<a href='upload_movies.php'>Upload movies</a>";
+            }
+        ?>
     </div>
     <div>
         <?php
