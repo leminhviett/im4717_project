@@ -1,7 +1,7 @@
 .container {
 	padding: 30px;
 	width: 65%;
-	background-color: #2a364a;
+	background-color: #212a3a;
 	max-width: 1000px;
 	position: absolute;
 	display: flex;
@@ -29,7 +29,7 @@ th {
 }
 
 tr:nth-child(even) {
-	background-color: rgb(71, 71, 71);
+	background-color: rgb(52, 52, 52);
 }
 
 tr:hover {
