@@ -1,6 +1,6 @@
 <?php
     session_start();
-    @ $db = new mysqli('localhost', 'root', '', 'cinema');
+    @ $db = new mysqli('localhost', 'f32ee', 'f32ee', 'f32ee');
     if (mysqli_connect_errno()) {
         echo mysqli_connect_errno();
         // echo "Error: Could not connect to database.  Please try again later.";
