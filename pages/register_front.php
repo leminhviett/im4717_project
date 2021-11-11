@@ -5,6 +5,7 @@
 		require 'shared/head.php';
 	?>
 	<link rel="stylesheet" href="../css/register_login.css" />
+    <script src="../js/inputs.js"></script>
 	
 	<body>
 		<?php
@@ -44,6 +45,5 @@
             </div>
 
         </form>
-		<!-- <script src="js/scripts.js"></script> -->
 	</body>
 </html>

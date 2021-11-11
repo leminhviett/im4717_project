@@ -1,4 +1,5 @@
 function check_input() {
+	console.log("Hello");
 	var name_regex = /^[a-zA-Z ]+$/;
 
 	var received_name = document.getElementById("fullname").value;

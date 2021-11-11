@@ -14,63 +14,63 @@
         <div class="center">
             <div>
                     <?php
-                    if (!isset( $_SESSION['username'])) {
-                        header("Location:login_front.php");
-                    }
-
-                    $sched_id = $_POST["sched_id"];
-                    unset($_POST['sched_id']);
-
-                    if(count($_POST) == 0) {
-                        echo "<p>You did not choose any seat!</p>";
-                        exit();
-                    }
-
-                    $username = $_SESSION['username'];
-                    $result = $db->query("select * from users where user_id='$username'");
-                    $user_id = $result->fetch_assoc()["id"];
-
-
-
-                    foreach($_POST as $key => $value) {
-                        $row = $key[0];
-                        $col = $key[2];
-                        
-                        $seat_booked_query = "UPDATE seats set booked=1 where schedule_id='$sched_id' and seat_col = '$col' and seat_row = '$row'";
-                        // echo $seat_booked_query;
-                        // exit();
-                        $result = $db->query($seat_booked_query);
-                        $persist1 = 0;
-
-                        if(! $result) {
-                            echo mysqli_error($db);
-                        } else {
-                            $persist1 = 1;
+                        if (!isset( $_SESSION['username'])) {
+                            header("Location:login_front.php");
                         }
 
-                        $persist2 = 0;
+                        $sched_id = $_POST["sched_id"];
+                        unset($_POST['sched_id']);
 
-                        $current_seat_id_query = "select id from seats where schedule_id='$sched_id' and seat_col = '$col' and seat_row = '$row'";
-                        $res_seat_id= $db->query($current_seat_id_query);
-                        $current_seat_id = $res_seat_id->fetch_assoc()['id'];
-
-                        $preserve_booking = "insert into bookings (seat_id, user_id) values ('$current_seat_id', '$user_id')";
-                        $result = $db->query($preserve_booking);
-
-                        if(! $result) {
-                            echo mysqli_error($db);
-                        } else {
-                            $persist2 = 1;
+                        if(count($_POST) == 0) {
+                            echo "<p>You did not choose any seat!</p>";
+                            exit();
                         }
 
-                        if ($persist1 && $persist2){
-                            echo "<p>Successfully booked seat $row - $col</p>";
+                        $username = $_SESSION['username'];
+                        $result = $db->query("select * from users where user_id='$username'");
+                        $user_id = $result->fetch_assoc()["id"];
+
+
+
+                        foreach($_POST as $key => $value) {
+                            $row = $key[0];
+                            $col = $key[2];
+                            
+                            $seat_booked_query = "UPDATE seats set booked=1 where schedule_id='$sched_id' and seat_col = '$col' and seat_row = '$row'";
+                            // echo $seat_booked_query;
+                            // exit();
+                            $result = $db->query($seat_booked_query);
+                            $persist1 = 0;
+
+                            if(! $result) {
+                                echo mysqli_error($db);
+                            } else {
+                                $persist1 = 1;
+                            }
+
+                            $persist2 = 0;
+
+                            $current_seat_id_query = "select id from seats where schedule_id='$sched_id' and seat_col = '$col' and seat_row = '$row'";
+                            $res_seat_id= $db->query($current_seat_id_query);
+                            $current_seat_id = $res_seat_id->fetch_assoc()['id'];
+
+                            $preserve_booking = "insert into bookings (seat_id, user_id) values ('$current_seat_id', '$user_id')";
+                            $result = $db->query($preserve_booking);
+
+                            if(! $result) {
+                                echo mysqli_error($db);
+                            } else {
+                                $persist2 = 1;
+                            }
+
+                            if ($persist1 && $persist2){
+                                echo "<p>Successfully booked seat $row - $col</p>";
+                            }
+
                         }
 
-                    }
-
-                    $db->close();
-                ?>
+                        $db->close();
+                    ?>
             </div>
         </div>
 		
